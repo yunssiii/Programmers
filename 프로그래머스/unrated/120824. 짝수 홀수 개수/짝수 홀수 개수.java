@@ -4,8 +4,6 @@ class Solution {
         int num1 = 0;
         int num2 = 0;
         
-        //1. 짝수 %2==0 / 홀수 %2==1
-        
         for(int i=0;i<num_list.length;i++){
             if(num_list[i]%2==0){
                 num1++;
@@ -16,8 +14,7 @@ class Solution {
         
         answer[0] = num1;
         answer[1] = num2;
-        
-        
+
         return answer;
     }
 }
