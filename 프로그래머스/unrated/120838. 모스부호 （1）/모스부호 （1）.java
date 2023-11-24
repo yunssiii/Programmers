@@ -1,14 +1,11 @@
 class Solution {
     public String solution(String letter) {
         String answer = "";
-        String[] morse =  {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
-        //String alpha = "abcdefghijklnmopqrstuvwxyz";
         String[] arr = letter.split(" ");
         
         //arr[0]가 morse[0]면 a 반환 
 
         for(int i=0;i<arr.length;i++){
-            //for(int j=0;j<arr.length;j++){
                 if (arr[i].equals(".-")) answer += "a";
                 if (arr[i].equals("-...")) answer += "b";
                 if (arr[i].equals("-.-.")) answer += "c";
@@ -35,12 +32,7 @@ class Solution {
                 if (arr[i].equals("-..-")) answer += "x";
                 if (arr[i].equals("-.--")) answer += "y";
                 if (arr[i].equals("--..")) answer += "z";
-
-                //if(arr[i].equals(morse[j])) answer += alpha.charAt(i);
-
-           // }
         }
-
         return answer;
     }
 }
