@@ -1,28 +1,21 @@
 class Solution {
     public int[] solution(int[] numbers, String direction) {
-        int[] answer = new int [numbers.length];
-        int index = 0;
+                
+        //마지막값은 따로 구해서 넣고
+        //나머지들은 +1 / -1 해서 넣기
+        
+        int[] answer = new int[numbers.length];
         
         if(direction.equals("right")){
-            for(int i=0;i<numbers.length;i++){
-                if(index>numbers.length-2){
-                    i = 0;
-                    answer[i] = numbers[index];
-                    return answer;
-                }
-                answer[i+1] = numbers[index];
-                index++;
+            for(int i=0;i<numbers.length-1;i++){
+                answer[i+1] = numbers[i];
             }
-        }else if(direction.equals("left")){
-            for(int j=0;j<numbers.length;j++){
-                if(index>numbers.length-2){
-                    j = 0;
-                    answer[index] = numbers[j];
-                    return answer;
-                }
-                answer[index] = numbers[j+1];
-                index++;
+            answer[0] = numbers[numbers.length-1];
+        }else {
+            for(int j=1;j<numbers.length;j++){
+                answer[j-1] = numbers[j];
             }
+            answer[numbers.length-1] = numbers[0];
         }
         
         return answer;
