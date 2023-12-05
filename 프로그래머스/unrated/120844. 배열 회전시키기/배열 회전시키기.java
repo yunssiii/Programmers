@@ -6,7 +6,7 @@ class Solution {
         if(direction.equals("right")){
             for(int i=0;i<numbers.length;i++){
                 if(index>numbers.length-2){
-                    i = i-(numbers.length-1);
+                    i = 0;
                     answer[i] = numbers[index];
                     return answer;
                 }
@@ -16,7 +16,7 @@ class Solution {
         }else if(direction.equals("left")){
             for(int j=0;j<numbers.length;j++){
                 if(index>numbers.length-2){
-                    j = j-(numbers.length-1);
+                    j = 0;
                     answer[index] = numbers[j];
                     return answer;
                 }
