@@ -3,26 +3,24 @@ import java.util.*;
 class Solution {
     public String solution(String s) {
         String answer = "";
+        int count = 0;
         
-        StringBuilder sb = new StringBuilder();
+        char[] charArray = s.toCharArray();
         
-        Map<Character, Integer> hashmap = new HashMap<>();
-        
-        for(char c : s.toCharArray()){
-            hashmap.put(c,hashmap.getOrDefault(c,0) + 1);
-        }
-        
-        for(char key : hashmap.keySet()){
-            
-            if(hashmap.get(key) == 1){
-                sb.append(key);
-            }
-        }
-        
-        String result = sb.toString();
-        char[] charArray = result.toCharArray();
         Arrays.sort(charArray);
-        answer = String.valueOf(charArray);
+        
+        for(int i=0;i<charArray.length;i++){
+            for(int j=0;j<charArray.length;j++){
+                if(charArray[i]==charArray[j]){
+                    count++;
+                }
+            }
+            
+            if(count == 1){
+                answer += charArray[i];
+            } 
+            count = 0;
+        }
         
         return answer;
     }
