@@ -1,15 +1,16 @@
 class Solution {
     public int solution(int num, int k) {
-        int answer = -1;
+        int answer = 0;
         
         String numStr = String.valueOf(num);
+        String kStr = String.valueOf(k);
         
-        for(int i=0;i<numStr.length();i++){
-            if(numStr.charAt(i) == k + '0'){
-                answer = i+1;
-                break;
-            }
+        answer = numStr.indexOf(kStr) + 1;
+        
+        if(answer == 0){
+            answer = -1;
         }
+        
         return answer;
     }
 }
