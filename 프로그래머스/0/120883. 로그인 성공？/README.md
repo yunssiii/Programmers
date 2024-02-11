@@ -1,10 +1,10 @@
 # [level 0] 로그인 성공? - 120883 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120883) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120883#) 
 
 ### 성능 요약
 
-메모리: 70.3 MB, 시간: 0.02 ms
+메모리: 77.1 MB, 시간: 0.02 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 2월 0일 22:39:2
+2024년 2월 0일 22:46:39
 
 ### 문제 설명
 
