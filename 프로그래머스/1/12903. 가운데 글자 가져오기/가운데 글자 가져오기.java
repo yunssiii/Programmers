@@ -1,15 +1,12 @@
 class Solution {
     public String solution(String s) {
         String answer = "";
+        int leng = s.length();
         
-        char[] chArray = s.toCharArray();
-        
-        if(s.length()%2==0){
-            for(int i=1;i>=0;i--){
-                answer += String.valueOf(chArray[s.length()/2 - i]);
-            }
+        if(leng%2==0){
+            answer = s.substring(leng/2-1,leng/2+1);
         }else {
-            answer = String.valueOf(chArray[s.length()/2]);
+            answer = s.substring(leng/2,leng/2+1);
         }
         
         return answer;
